@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitTesting.Producer.Api", "RabbitTesting.Producer.Api\RabbitTesting.Producer.Api.csproj", "{0FD25A27-C778-47E5-BD97-F56ACB59ACEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitTesting.Producer", "RabbitTesting.Producer", "{6195CDAD-2373-4D83-8CD3-369264CE5520}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitTesting.Consumer", "RabbitTesting.Consumer", "{DB9C5622-7281-4889-B944-46DB89401458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitTesting.Consumer.Api", "RabbitTesting.Consumer.Api\RabbitTesting.Consumer.Api.csproj", "{BE19A6FC-83D0-4FE0-9246-882D419D7D74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitTesting.BuildingBlocks", "RabbitTesting.BuildingBlocks", "{5823885B-D696-4D2D-A6BD-4711CDBAC6ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitTesting.BuildingBlocks.EventBus", "RabbitTesting.BuildingBlocks.EventBus\RabbitTesting.BuildingBlocks.EventBus.csproj", "{3E9E95EB-5315-471F-A101-BEB47A310C2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitTesting.Contracts", "RabbitTesting.Contracts", "{A70444AF-81BE-4146-9A5B-91BFBD8ED87E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitTesting.BuildingBlocks.RabbitMqEventBus", "RabbitTesting.BuildingBlocks.RabbitMqEventBus\RabbitTesting.BuildingBlocks.RabbitMqEventBus.csproj", "{29493DD5-D136-4E27-A245-45EB25080926}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitTesting.Contracts.RabbitMq", "RabbitTesting.Contracts.RabbitMq\RabbitTesting.Contracts.RabbitMq.csproj", "{EC7AAA78-9682-45A7-BD25-B7C9E9D01E60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitTesting.OtherConsumer", "RabbitTesting.OtherConsumer", "{F64D7482-49C6-4557-94CE-00E7D831234A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitTesting.OtherConsumer.Api", "RabbitTesting.OtherConsumer.Api\RabbitTesting.OtherConsumer.Api.csproj", "{1FA3F5E7-72C8-4886-938F-8541D1604F8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FD25A27-C778-47E5-BD97-F56ACB59ACEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD25A27-C778-47E5-BD97-F56ACB59ACEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD25A27-C778-47E5-BD97-F56ACB59ACEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD25A27-C778-47E5-BD97-F56ACB59ACEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE19A6FC-83D0-4FE0-9246-882D419D7D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE19A6FC-83D0-4FE0-9246-882D419D7D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE19A6FC-83D0-4FE0-9246-882D419D7D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE19A6FC-83D0-4FE0-9246-882D419D7D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9E95EB-5315-471F-A101-BEB47A310C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9E95EB-5315-471F-A101-BEB47A310C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9E95EB-5315-471F-A101-BEB47A310C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9E95EB-5315-471F-A101-BEB47A310C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29493DD5-D136-4E27-A245-45EB25080926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29493DD5-D136-4E27-A245-45EB25080926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29493DD5-D136-4E27-A245-45EB25080926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29493DD5-D136-4E27-A245-45EB25080926}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7AAA78-9682-45A7-BD25-B7C9E9D01E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7AAA78-9682-45A7-BD25-B7C9E9D01E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7AAA78-9682-45A7-BD25-B7C9E9D01E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7AAA78-9682-45A7-BD25-B7C9E9D01E60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA3F5E7-72C8-4886-938F-8541D1604F8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA3F5E7-72C8-4886-938F-8541D1604F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA3F5E7-72C8-4886-938F-8541D1604F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA3F5E7-72C8-4886-938F-8541D1604F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FD25A27-C778-47E5-BD97-F56ACB59ACEB} = {6195CDAD-2373-4D83-8CD3-369264CE5520}
+		{BE19A6FC-83D0-4FE0-9246-882D419D7D74} = {DB9C5622-7281-4889-B944-46DB89401458}
+		{3E9E95EB-5315-471F-A101-BEB47A310C2B} = {5823885B-D696-4D2D-A6BD-4711CDBAC6ED}
+		{29493DD5-D136-4E27-A245-45EB25080926} = {5823885B-D696-4D2D-A6BD-4711CDBAC6ED}
+		{EC7AAA78-9682-45A7-BD25-B7C9E9D01E60} = {A70444AF-81BE-4146-9A5B-91BFBD8ED87E}
+		{1FA3F5E7-72C8-4886-938F-8541D1604F8B} = {F64D7482-49C6-4557-94CE-00E7D831234A}
+	EndGlobalSection
+EndGlobal
