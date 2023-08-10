@@ -1,9 +1,10 @@
 ﻿using MassTransit;
+using RabbitTesting.BuildingBlocks.RabbitMqEventBus.Consumers;
 using RabbitTesting.Contracts.RabbitMq.Events;
 
-namespace RabbitTesting.Api.Consumers;
+namespace RabbitTesting.Consumer.Api.Consumers;
 
-public sealed class RabbitMqTestingConsumer: IConsumer<RabbitMqTestingEvent>
+public sealed class RabbitMqTestingConsumer: ConsumerBase<RabbitMqTestingEvent>
 {
     private readonly ILogger<RabbitMqTestingConsumer> _logger;
 
@@ -12,7 +13,7 @@ public sealed class RabbitMqTestingConsumer: IConsumer<RabbitMqTestingEvent>
         _logger = logger;
     }
 
-    public Task Consume(ConsumeContext<RabbitMqTestingEvent> context)
+    protected override Task Handle(ConsumeContext<RabbitMqTestingEvent> context)
     {
         _logger.LogInformation("RabbitMqTested: {@Product}", context.Message);
         return Task.CompletedTask;

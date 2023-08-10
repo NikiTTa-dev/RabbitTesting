@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using RabbitTesting.BuildingBlocks.EventBus.EventBus;
+using RabbitTesting.BuildingBlocks.RabbitMqEventBus.Consumers;
 using RabbitTesting.BuildingBlocks.RabbitMqEventBus.MassTransit;
 using RabbitTesting.BuildingBlocks.RabbitMqEventBus.Settings;
 
@@ -35,10 +36,11 @@ public static class MassTransitServiceCollectionExtensions
         services.AddMassTransit(busConfigurator =>
         {
             busConfigurator.SetKebabCaseEndpointNameFormatter();
-
+            busConfigurator.AddConsumer<IntegrationEventErrorOccuredConsumer>();
             busConfigurator.UsingRabbitMq((context, configurator) =>
             {
-                configurator.ConfigureEndpoints(context);
+                massTransitConfigurator.ConfigureRabbitMqBus?.Invoke(configurator, context);
+                    
                 var settings = context.GetRequiredService<IOptions<RabbitMqSettings>>().Value;
                 configurator.Host(new Uri(settings.Host), h =>
                 {
@@ -46,8 +48,9 @@ public static class MassTransitServiceCollectionExtensions
                     h.Password(settings.Password);
                 });
                 
-                massTransitConfigurator.ConfigureRabbitMqBus?.Invoke(configurator, context);
+                configurator.ConfigureEndpoints(context);
             });
+            
             massTransitConfigurator.ConfigureBus?.Invoke(busConfigurator);
         });
 

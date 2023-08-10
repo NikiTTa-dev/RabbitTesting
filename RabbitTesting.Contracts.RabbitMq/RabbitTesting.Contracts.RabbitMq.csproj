@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\RabbitTesting.BuildingBlocks.EventBus\RabbitTesting.BuildingBlocks.EventBus.csproj" />
+    </ItemGroup>
+
 </Project>

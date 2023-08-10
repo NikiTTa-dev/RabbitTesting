@@ -19,9 +19,14 @@ public class RabbitMqTestingController : ControllerBase
     public async Task<IActionResult> Get(CancellationToken ct)
     {
         await _eventBus.PublishAsync(new RabbitMqTestingEvent {
-            Id = 123,
+            ItemId = 123,
             Name = "RabbitMqTestingEventName",
             Price = 1234
+        }, ct);
+
+        await _eventBus.PublishAsync(new NewRabbitMqTestingEvent
+        {
+            ItemId = 321
         }, ct);
         
         return Ok();

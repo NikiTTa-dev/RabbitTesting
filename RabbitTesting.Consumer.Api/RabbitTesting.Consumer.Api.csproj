@@ -4,7 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace>RabbitTesting.Api</RootNamespace>
+        <RootNamespace>RabbitTesting.Consumer.Api</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,6 +17,8 @@
       <ProjectReference Include="..\RabbitTesting.BuildingBlocks.RabbitMqEventBus\RabbitTesting.BuildingBlocks.RabbitMqEventBus.csproj" />
       <ProjectReference Include="..\RabbitTesting.Contracts.RabbitMq\RabbitTesting.Contracts.RabbitMq.csproj" />
     </ItemGroup>
+
+
 
 
 </Project>

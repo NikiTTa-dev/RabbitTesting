@@ -1,6 +1,7 @@
 using MassTransit;
 using RabbitTesting.BuildingBlocks.RabbitMqEventBus.Extensions;
 using RabbitTesting.BuildingBlocks.RabbitMqEventBus.MassTransit;
+using RabbitTesting.Consumer.Api.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ builder.Services.AddRabbitMqMassTransit(builder.Configuration, new MassTransitCo
     ConfigureBus = (configurator) =>
     {
         configurator.AddConsumers(typeof(Program).Assembly);
+        configurator.AddConsumer<RabbitMqTestingConsumer>()
+            .Endpoint(registrationConfigurator => registrationConfigurator.Name = "rabbit-mq-testing-logging");
     }
 });
 
